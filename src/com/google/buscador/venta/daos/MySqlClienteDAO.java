@@ -31,7 +31,7 @@ public class MySqlClienteDAO implements ClienteDAO {
 			pstm.setString(2, obj.getApeCliente());
 			pstm.setInt(3, obj.getDniCliente());
 			pstm.setString(4, obj.getFecNacCliente());
-			pstm.setInt(5, obj.getTipo().getcodTipo());
+			pstm.setInt(5, obj.getTipo().getCodTipo());
 			log.info(pstm);
 			insertados = pstm.executeUpdate();
 		} catch (Exception e) {
@@ -61,7 +61,7 @@ public class MySqlClienteDAO implements ClienteDAO {
 			TipoBean bean = null;
 			while(rs.next()){
 				bean = new TipoBean();
-				bean.setcodTipo(rs.getInt(1));
+				bean.setCodTipo(rs.getInt(1));
 				bean.setNombre(rs.getString(2));
 				lista.add(bean);
 			}
