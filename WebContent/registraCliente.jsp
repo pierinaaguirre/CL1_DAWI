@@ -16,7 +16,7 @@
 <body>
 
 <div class="container">
-<h1>Registra Cliente</h1>
+<h1>Registra Clientes</h1>
 	
 	<c:if test="${sessionScope.MENSAJE != null }">
 			<div class="alert alert-success" id="success-alert">
